@@ -302,10 +302,10 @@ return [
         // ],
 
         // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
+        // [
+        //     'type' => 'sidebar-menu-search',
+        //     'text' => 'search',
+        // ],
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
@@ -313,9 +313,16 @@ return [
         ],
         [
             'text'        => 'Clientes',
-            'url'         => 'admin/home',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
+            'url'         => '/home',
+            'icon'        => ' fas fa-fw  fa-users',
+            // 'label'       => 4,
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Calendario',
+            'url'         => 'layouts/Calendar',
+            'icon'        => ' fas fa-fw fa-regular fa-calendar',
+            // 'label'       => 4,
             'label_color' => 'success',
         ],
         ['header' => 'account_settings'],

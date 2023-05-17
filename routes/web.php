@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,4 +30,7 @@ Route::get('/home', function() {
 
 Route::get('admin/new',function(){
     return 'new page';
+});
+Route::get('layouts/Calendar',function(){
+    return view('layouts/Calendar');
 });
