@@ -290,6 +290,7 @@ return [
     */
 
     'menu' => [
+     
         // Navbar items:
         // [
         //     'type'         => 'navbar-search',
@@ -306,6 +307,7 @@ return [
         //     'type' => 'sidebar-menu-search',
         //     'text' => 'search',
         // ],
+        
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
@@ -342,7 +344,7 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         // [
-        //     'text'    => 'multilevel',
+        //     'text'    => 'Acciones Clientes',
         //     'icon'    => 'fas fa-fw fa-share',
         //     'submenu' => [
         //         [
