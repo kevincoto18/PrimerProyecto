@@ -18,15 +18,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', function() {
+//     return view('home');
+// })->name('home')->middleware('auth');
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::post('/adduser', [App\Http\Controllers\HomeController::class, 'adduser'])->name('adduser')->middleware('auth');
+// Route::post('/insertar-cliente', [HomeController::class, 'insertarCliente'])->name('insertar-cliente');
 
-Auth::routes();
-
-Route::get('/home', function() {
-    return view('home');
-})->name('home')->middleware('auth');
 
 Route::get('admin/new',function(){
     return 'new page';
