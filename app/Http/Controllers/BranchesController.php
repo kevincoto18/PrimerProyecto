@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class Calendar extends Controller
+class BranchesController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +24,9 @@ class Calendar extends Controller
      */
     public function index()
     {
-        return view('Calendar');
+        $clients = DB::select('SELECT * FROM client');
+    
+        return view('layouts/branch-add', compact('clients'));
     }
+
 }

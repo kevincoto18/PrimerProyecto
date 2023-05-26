@@ -327,6 +327,28 @@ return [
             // 'label'       => 4,
             'label_color' => 'success',
         ],
+        [
+            'text'    => 'Acciones Clientes',
+                'icon'    => 'fas fa-fw fa-regular fa-building',
+                'submenu' => [
+                    [
+                        'text' => 'Agregar Sede',
+                        'icon' => 'fa fa-plus',
+                        'url'  => 'layouts/Branch-Add',
+                    ],
+                    [
+                        'text'    => 'Editar Sede',
+                        'icon' => 'fas fa-pencil-alt',
+                        'url'     => '#',
+                       
+                    ],
+                    [
+                        'text' => 'Eliminar Sede',
+                        'icon' => 'fa fa-eraser',
+                        'url'  => '#',
+                    ],
+                ],
+            ], 
         ['header' => 'account_settings'],
         [
             'text' => 'profile',

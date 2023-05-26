@@ -30,7 +30,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
-Route::post('/adduser', [App\Http\Controllers\HomeController::class, 'adduser'])->name('adduser')->middleware('auth');
+Route::post('/addclient', [App\Http\Controllers\HomeController::class, 'addclient'])->name('addclient')->middleware('auth');
+Route::post('/DeleteClient', [App\Http\Controllers\HomeController::class, 'DeleteClient'])->name('DeleteClient')->middleware('auth');
+Route::get('/layouts/Branch-Add', [App\Http\Controllers\BranchesController::class, 'index'])->name('index')->middleware('auth');
 // Route::post('/insertar-cliente', [HomeController::class, 'insertarCliente'])->name('insertar-cliente');
 
 
@@ -40,3 +42,6 @@ Route::get('admin/new',function(){
 Route::get('layouts/Calendar',function(){
     return view('layouts/Calendar');
 });
+// Route::get('layouts/Branch-Add',function(){
+//     return view('layouts/Branch-Add');
+// });
